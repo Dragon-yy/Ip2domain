@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"time"
 )
 
 func FetchDomains(apiKey, ip string) ([][]string, error) {
@@ -15,6 +16,7 @@ func FetchDomains(apiKey, ip string) ([][]string, error) {
 	url := fmt.Sprintf("https://fofa.info/api/v1/search/all?key=%s&qbase64=%s", apiKey, base64.StdEncoding.EncodeToString([]byte(query)))
 
 	resp, err := http.Get(url)
+	time.Sleep(1 * time.Second)
 	if err != nil {
 		return nil, err
 	}
