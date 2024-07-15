@@ -1,6 +1,7 @@
 # ip2domain
 
 ip2domain is a CLI tool to lookup domains associated with an IP address using the FOFA API and save the results to a CSV file.
+
 ip2domain 是一个命令行工具，用于使用 FOFA API 查询与 IP 地址相关的域名，并将结果保存到 CSV 文件中。
 
 ## Usage
